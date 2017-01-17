@@ -4,12 +4,15 @@ $("form#transportation_survey").submit(function(event){
   $("#work-responses").show();
   $("input:checkbox[name=work-transportation]:checked").each(function(){
     var workTransportMode = $(this).val();
-    $("#work-responses").append(workTransportMode + "<br>");
+    var capitalWorkTransportationMode = workTransportMode.toUpperCase();
+    $("#work-responses").append(capitalWorkTransportationMode + "<br>");
    });
   $("#fun-responses").show();
   $("input:checkbox[name=fun-transportation]:checked").each(function(){
     var funTransportationMode = $(this).val();
-    $("#fun-responses").append(funTransportationMode + "<br>");
+    var capitalFunTransportationMode = funTransportationMode.toUpperCase();
+    $("#fun-responses").append(capitalFunTransportationMode + "<br>");
+
   });
   $("#transportation_survey").hide();
 });
